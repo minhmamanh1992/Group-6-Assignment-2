@@ -95,4 +95,16 @@ Cleaning the Target Variable:
 The target variable, Life expectancy, had 10 missing values.
 
 Action: These rows were dropped from the dataset. Imputing the target variable would introduce bias, and the model should only be trained and evaluated on real, observed data.
+## 6. Model training
+## 7. Analysis
+Cross-Analysis of Coefficients Between the Regressions
 
+Examining the top five coefficients from both models, Ridge Regression reduces the magnitudes of under-five deaths and infant deaths. This shrinkage is caused by Ridge’s penalty function, which regularizes extreme coefficients to account for multicollinearity and improves balance across predictors. Ridge therefore distributes predictive influence more evenly and produces more stable coefficient estimates.
+
+In the Ridge model, the top five predictive factors are under-five deaths, infant deaths, HIV/AIDS, Year, and Schooling. The strong negative relationship of under-five and infant deaths (−5.15 and +4.92) shows that child mortality substantially reduces life expectancy. The negative coefficient for HIV/AIDS (−1.76) indicates that increased prevalence leads to shorter lifespans, especially in regions with limited access to treatment. The Year coefficient (+1.25) captures a consistent upward trend in life expectancy over time, while Schooling (+0.44) reflects the positive effect of education on health and longevity.
+
+⸻
+
+Conclusion
+
+To increase life expectancy, there must be a strong focus on reducing infant and child mortality, mitigating life-threatening diseases such as HIV/AIDS, and improving education. HIV/AIDS remains a major cause of premature death, particularly in countries lacking adequate healthcare infrastructure. Education equips individuals to make informed health decisions and maintain better personal wellbeing. The common thread among these factors is the need to strengthen healthcare functionality and accessibility, improving both the quality of life and the overall longevity of populations.
