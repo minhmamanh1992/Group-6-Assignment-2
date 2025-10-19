@@ -34,9 +34,6 @@ Clone this repository to your local machine.
 Ensure you have the dataset (Life Expectancy Data.csv) in the same directory.
 
 Run the main Python script from your terminal:
-
-Bash
-
 python model_training.py
 This script will perform the following steps:
 
@@ -48,7 +45,7 @@ Evaluate the model's performance.
 
 Output the key findings, including model coefficients and feature importance.
 
-5. Data Cleaning & Preprocessing
+## 5. Data Cleaning & Preprocessing
 A thorough data cleaning process was essential to prepare the dataset for modeling.
 
 Column Name Cleaning: Removed leading/trailing whitespace from all column names for easier referencing (e.g., ' thinness 1-19 years' became 'thinness 1-19 years').
