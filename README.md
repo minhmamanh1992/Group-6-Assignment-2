@@ -25,7 +25,7 @@ The insights from this model can help countries identify key areas for policy in
 ## 3. Installation & Requirements
 
 To run the analysis, you will need Python 3.x and the following libraries. You can install them using pip:
-```bash
+
 pip install pandas numpy scikit-learn matplotlib seaborn
 python your_script_name.py
 ## 4. How to Run the Code
