@@ -282,10 +282,13 @@ coef_df_linear = pd.DataFrame({
 }).sort_values('Abs_Coefficient', ascending=False)
 
 print("\nTop 10 Most Important Features (Linear Regression):")
+# Keep only features that are not dummies
+coef_df_linear = coef_df_linear[~coef_df_linear['Feature'].str.contains('Country_')]
+coef_df_linear = coef_df_linear[~coef_df_linear['Feature'].str.contains('Status_')]
 print(coef_df_linear.head(10))
 
 # Get coefficients from Ridge Regression
-best_ridge_alpha = 1.0 
+best_ridge_alpha = 1.0
 ridge_model = Ridge(alpha=best_ridge_alpha)
 ridge_model.fit(X_train_scaled, y_train)
 
@@ -303,5 +306,8 @@ coef_df_ridge = pd.DataFrame({
 }).sort_values('Abs_Coefficient', ascending=False)
 
 print("\nTop 10 Most Important Features (Ridge Regression):")
+# Keep only features that are not dummies
+coef_df_ridge = coef_df_ridge[~coef_df_ridge['Feature'].str.contains('Country_')]
+coef_df_ridge = coef_df_ridge[~coef_df_ridge['Feature'].str.contains('Status_')]
 print(coef_df_ridge.head(10))
 #endregion
