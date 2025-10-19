@@ -95,7 +95,17 @@ Cleaning the Target Variable:
 The target variable, Life expectancy, had 10 missing values.
 
 Action: These rows were dropped from the dataset. Imputing the target variable would introduce bias, and the model should only be trained and evaluated on real, observed data.
-## 6. Model training
+
+## 6. Model Training and Evaluation
+
+Standard Scaler is used to normalize the data to ensure ridge regression penalty treats the coefficients fairly, and allows comparision between linear and ridge regression model. Then linear and ridge regression model functions were imported from sklearn.
+
+The result of the linear regression model shows that it explains 95.58% of the test data and its prediction deviate from the true value by 1.96 years (age). Considering the values of life expectancy range from 40s to 80s, Mean Squared Error (MSE) = 3.82 and Root Mean Squared Error (RMSE) = 1.96 are considered to be small enough to indicate that the model performs well.
+
+The result of the ridge regression model shows that the best alpha is 1.0. It explains 95.67% of the test data and its prediction devaite from the true value by 1.94 years (age). This is slightly better than linear regression, but overall the ridge regression model are quite simliar to linear regression model, and both performs well.
+
+For the K-fold cross validation, a 5-fold cross validation is implemented. The results for both models returns similar R-Squared values but slightly higher MSE and RMSE compared to the single train-test split by around 0.2 and 0.04. The similar R-Squared value could suggest that the model is quite stable. The slightly higher MSE and RMSE could suggest that both model could perform better at a specific split of data. By considering the fact that it is a small difference compared to the single train-test split, both models could still be considered to be a good generalization and stable model.
+
 ## 7. Analysis
 Cross-Analysis of Coefficients Between the Regressions
 
