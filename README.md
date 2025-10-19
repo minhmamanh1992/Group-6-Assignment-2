@@ -1,8 +1,8 @@
 # Group-6-Assignment-2
 # Exploring Regression Techniques to Analyze and Predict Life Expectancy
 Contributors:
-Tran Duc Minh: Data Cleaning and Data Processing
-Lin WangYu: Model Training and Evaluation
+Tran Duc Minh: Data Cleaning and Data Processing,
+Lin WangYu: Model Training and Evaluation,
 Muhammad Husni Bin Mohammed Haron: Analysis and Comparision
 
 ## 1. Project Overview
